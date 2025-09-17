@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to 99Commercial</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8fafc;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300"><path d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="rgba(255,255,255,0.1)"/></svg>') no-repeat center bottom;
+            background-size: cover;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        .welcome-text {
+            font-size: 28px;
+            font-weight: 300;
+            position: relative;
+            z-index: 1;
+        }
+        .content {
+            padding: 40px 30px;
+        }
+        .main-heading {
+            font-size: 24px;
+            color: #1f2937;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .feature {
+            text-align: center;
+            padding: 20px;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            background-color: #f9fafb;
+        }
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 15px;
+            background-color: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+        }
+        .feature-title {
+            background-color: #ef4444;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        .feature-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+        .account-info {
+            background-color: #f3f4f6;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        .account-heading {
+            font-size: 18px;
+            color: #1f2937;
+            margin-bottom: 15px;
+        }
+        .account-details {
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+        .account-links {
+            margin-top: 15px;
+        }
+        .account-links a {
+            color: #ef4444;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+        .support-info {
+            color: #6b7280;
+            margin-top: 15px;
+        }
+        .support-info a {
+            color: #ef4444;
+            text-decoration: none;
+        }
+        .footer {
+            background-color: #1f2937;
+            color: #9ca3af;
+            padding: 30px;
+            text-align: center;
+        }
+        .footer-logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            margin-bottom: 20px;
+        }
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #374151;
+            border-radius: 50%;
+            margin: 0 5px;
+            text-align: center;
+            line-height: 40px;
+            color: #9ca3af;
+            text-decoration: none;
+        }
+        .footer-links {
+            margin-bottom: 20px;
+        }
+        .footer-links a {
+            color: #ef4444;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .copyright {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .disclaimer {
+            font-size: 11px;
+            line-height: 1.4;
+            margin-top: 20px;
+        }
+        .disclaimer a {
+            color: #ef4444;
+            text-decoration: none;
+        }
+        @media (max-width: 600px) {
+            .features {
+                gap: 20px;
+            }
+            .feature {
+                padding: 15px;
+            }
+            .content {
+                padding: 20px 15px;
+            }
+            .header {
+                padding: 30px 15px;
+            }
+            .logo {
+                font-size: 28px;
+            }
+            .welcome-text {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">99Commercial</div>
+            <div class="welcome-text">Welcome to 99Commercial</div>
+        </div>
+        
+        <div class="content">
+            <h1 class="main-heading">The best place to find the right commercial real estate for you.</h1>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-title">Search</div>
+                    <div class="feature-description">
+                        Find the right listing for your business by using the location, size, price and other advanced search filters.
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-title">Saved Searches</div>
+                    <div class="feature-description">
+                        Never miss an opportunity and be among the first to know about new availabilities with real time email alerts.
+                    </div>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">❤️</div>
+                    <div class="feature-title">Favourites</div>
+                    <div class="feature-description">
+                        Stay in the loop and receive updates when there are changes to your favourited listings.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="account-info">
+                <h3 class="account-heading">Your account information:</h3>
+                <div class="account-details">
+                    <strong>Email:</strong> {{email}}
+                </div>
+                <div class="account-details">
+                    <strong>Name:</strong> {{firstName}} {{lastName}}
+                </div>
+                <div class="account-links">
+                    <a href="{{frontendUrl}}/recover-password">Recover Password</a>
+                    <a href="{{frontendUrl}}/profile">Edit Profile</a>
+                </div>
+                <div class="support-info">
+                    For customer support contact <a href="mailto:support@99commercial.com">support@99commercial.com</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="footer-logo">99Commercial</div>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">YouTube</a>
+            </div>
+            <div class="footer-links">
+                <a href="{{frontendUrl}}/privacy-policy">Privacy Policy</a>
+                <a href="{{frontendUrl}}/subscription">Subscription Centre</a>
+            </div>
+            <div class="copyright">
+                © 2025 99Commercial. All rights reserved.
+            </div>
+            <div class="disclaimer">
+                This email was sent to {{email}} on behalf of 99Commercial. This email is confidential and intended solely for the use of the individual or entity to whom it is addressed. If you have received this email in error, please contact us at <a href="mailto:support@99commercial.com">support@99commercial.com</a>.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
